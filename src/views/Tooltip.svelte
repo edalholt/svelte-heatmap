@@ -6,7 +6,7 @@
     export let value;
     export let x;
     export let y;
-    export let unit = {single: 'contribution', pural: 'contributions'};
+    export let unit;
 
     onMount(()=> {
         console.log($$props);
@@ -14,7 +14,7 @@
 </script>
 
 <div class="tooltip" style="left:{x}px; top: {y}px">
-    <span><strong>{value ? `${value} ${unit.pural}` : `No ${unit.single}`}</strong> on {formatDate(date)}</span>
+    <span><strong>{value ? `${value} ${unit.plural}` : `No ${unit.single}`}</strong> on {formatDate(date)}</span>
 </div>
 
 <style>

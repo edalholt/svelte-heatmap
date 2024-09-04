@@ -60,7 +60,7 @@
     {/if}
     </svg>
     {#if showTooltip}
-        <Tooltip {...tooltipPoint}/>
+        <Tooltip {...{ ...tooltipPoint, unit }} />
     {/if}
 </div>
 
@@ -94,6 +94,7 @@ export let monthLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'
 export let startDate = null;
 export let view = 'weekly';
 export let enableTooltip = true;
+export let unit = { single: "contribution", plural: "contributions" };
 
 let tooltipPoint;
 let showTooltip = false;
